@@ -19,18 +19,185 @@
   min-height: 100%;
 }
 
+/* .type {
+  font-size: 12px;
+  background-color: red;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  color: black;
+} */
+
+.title {
+  display: flex;
+  margin: 10px 10px;
+  /* flex-direction: row;
+padding: 0px 5px;
+gap: 10px;
+
+width: 34px;
+height: 20px;
+
+background: #CEAD5C;
+border-radius: 5px; */
+}
+
+.hour {
+  position: absolute;
+  top: 5%;
+  left: 88%;
+  font-size: 12px;
+}
+
+.type {
+  width: 34px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 5px;
+  background: #cead5c;
+  gap: 10px;
+  color: black;
+}
+
+.typeName {
+  display: flex;
+  gap: 10px;
+  padding: 0 5px;
+  height: 20px;
+  border-radius: 5px;
+
+  margin-left: 5px;
+
+  font-weight: 500;
+  color: #f0f0ff;
+}
+
+.location {
+  display: flex;
+  justify-content: left;
+  margin: 10px 10px;
+}
+
+.location-name {
+  color: #c5c5d9;
+  font-weight: 400;
+  height: 14px;
+  gap: 10px;
+  margin-left: 5px;
+}
+
+.location-icon {
+  position: relative;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+}
+
+.car {
+  display: flex;
+  margin: 10px 10px;
+}
+
+.car-name {
+  color: #c5c5d9;
+  font-weight: 400;
+  height: 14px;
+  gap: 10px;
+  margin-left: 5px;
+}
+
+.car-icon {
+  position: relative;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.car-plate {
+  color: #c5c5d9;
+  font-weight: 400;
+  height: 14px;
+  gap: 10px;
+}
+
+.car-icon-plate {
+  position: relative;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.button-join {
+  font-size: 12px;
+  background-color: #292933;
+  border-radius: 5px;
+  padding: 3px 13px;
+}
+
+.button-location {
+  font-size: 12px;
+  background-color: #292933;
+  border-radius: 5px;
+  padding: 3px 13px;
+}
+
+.buttons-container {
+  display: flex;
+}
+
+.players-container {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.players {
+  display: flex;
+  padding: 0 5px;
+  background-color: #292933;
+  border-radius: 5px;
+  padding: 0 10px;
+  gap: 5px;
+}
+
+.players-number {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.players-icon {
+  position: relative;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+
 .notify {
+  display: flex;
   text-align: center;
   margin: 10px;
   margin-left: auto;
-  width: 300px;
-  background-color: rgb(34, 34, 34);
-  opacity: 0.7;
+  width: 329px;
+  height: 120px;
+  background-color: rgb(31, 31, 38);
+  opacity: 0.8;
   color: white;
   position: relative;
   overflow: hidden;
   border-radius: 5px;
   display: none;
+  gap: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   animation: pointer 1s ease-in-out infinite;
 }
 
@@ -58,9 +225,9 @@
   }
 }
 
-.content {
+/* .content {
   padding: 10px;
-}
+} */
 
 /* .buttons{
   margin: 20px 0 0 0;
@@ -82,22 +249,4 @@
   100% {
     filter: brightness(100%);
   }
-}
-
-hr {
-  margin: 10px 0 10px 0;
-  border-radius: 100%;
-}
-
-.logo {
-  position: absolute;
-  left: 10%;
-  top: 60%;
-  width: 1px;
-  height: 1px;
-  transform: scale(0.15);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 15px;
 }

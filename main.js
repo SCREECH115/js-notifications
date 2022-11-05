@@ -31,14 +31,34 @@ class Toast {
 
   render(dom) {
     this.#elem = $.parseHTML(`<div class="notify">
-    <div class="logo"><img src='img/sasp.png'></img></div>
-    <div class="content"><h2><p style="color:#34568B; margin-top: 10px">${
-      this.#typeName
-    }</h2><hr></div>
-    <div class="content">CODE <i>${this.#type}</i></div>
-    <div class="content">${this.#location}</div>
-    <div class="content">Time ${hoursAndMinutes}</div>
-    <div class="time"></div>
+    <div class="hour">${hoursAndMinutes}</div>    
+
+    <div class="title">
+      <div class="type">${this.#type}</div> 
+      <div class="typeName">${this.#typeName}</div>
+    </div>
+    
+    <div class="location">
+      <ion-icon class="location-icon" name="location-outline"></ion-icon> 
+      <div class="location-name">${this.#location}</div>
+    </div>
+
+    <div class="car">
+      <ion-icon class="car-icon" name="car-outline"></ion-icon><div class="car-name">Kuruma</div>
+      <ion-icon class="car-icon-plate" name="information-outline"></ion-icon><div class="car-plate">ABC-123</div>
+    </div>
+
+    <div class="buttons">
+      <div class="button-join">Dołącz</div>
+      <div class="button-location">Lokalizacja</div>
+      <div class="players">
+      <ion-icon class="players-icon" name="people-outline"></ion-icon>
+      <div class="players-number">6</div>
+      </div>
+    </div>
+
+
+
     </div>`);
 
     $(this.#elem).click((e) => {
@@ -123,17 +143,17 @@ window.onload = () => {
   toast.addItem("", 5000, 101, "Active shooting", "Magellan Avenue");
   setTimeout(() => {
     toast.addItem("", 5000, 501, "Car theft", "Meteor Street");
-    setTimeout(() => {
-      toast.addItem("", 5000, 900, "Bank robbery", "San Andreas Avenue");
-      setTimeout(() => {
-        toast.addItem("", 5000, 960, "Kidnapping", "Mirror Park Boulevard");
-        setTimeout(() => {
-          toast.addItem("", 5000, 801, "Shop robbery", "Los Santos Airport");
-          setTimeout(() => {
-            toast.addItem("", 5000, 609, "Prostitution", "Hawick Avenue");
-          }, 3000);
-        }, 3000);
-      }, 3000);
-    }, 3000);
+    // setTimeout(() => {
+    //   toast.addItem("", 5000, 900, "Bank robbery", "San Andreas Avenue");
+    //   setTimeout(() => {
+    //     toast.addItem("", 5000, 960, "Kidnapping", "Mirror Park Boulevard");
+    //     setTimeout(() => {
+    //       toast.addItem("", 5000, 801, "Shop robbery", "Los Santos Airport");
+    //       setTimeout(() => {
+    //         toast.addItem("", 5000, 609, "Prostitution", "Hawick Avenue");
+    //       }, 3000);
+    //     }, 3000);
+    //   }, 3000);
+    // }, 3000);
   }, 2000);
 };
