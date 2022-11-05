@@ -50,10 +50,11 @@ class Toast {
       $(this.#elem).css("opacity", "0.95").css("animation", "none");
       clearInterval(this.#interval);
       $(this.#elem).find(".time").css("width", "0%");
-      $(this.#elem).css("left", "-40%");
       $(this.#elem).off("click");
+      // $(this.#elem).css("left", "-40%");
       $(this.#elem).click((e) => {
         $(this.#elem).remove();
+        this.#handler.dequeue(this);
       });
     });
 
