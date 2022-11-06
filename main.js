@@ -39,7 +39,12 @@ class Toast {
     </div>
     
     <div class="location">
-      <ion-icon class="location-icon" name="location-outline"></ion-icon> 
+      <img class="location-icon" src="./img/location.svg "></img>
+      
+      <span class="material-symbols-rounded">
+travel_explore
+</span>
+
       <div class="location-name">${this.#location}</div>
     </div>
 

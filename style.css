@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: "Poppins", sans-serif; */
-  font-family: "SF Pro";
+  font-family: "Roboto", sans-serif;
 }
 
 /* body {
@@ -45,11 +45,18 @@ border-radius: 5px; */
 .hour {
   position: absolute;
   top: 5%;
-  left: 88%;
-  font-size: 12px;
+  left: 89%;
+  font-size: 10px;
+  font-weight: 400;
 }
 
 .type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.41px;
   width: 34px;
   height: 20px;
   padding: 0 5px;
@@ -61,6 +68,8 @@ border-radius: 5px; */
 
 .typeName {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   padding: 0 5px;
   height: 20px;
@@ -68,8 +77,9 @@ border-radius: 5px; */
 
   margin-left: 5px;
 
-  font-weight: 500;
+  font-weight: 600;
   color: #f0f0ff;
+  font-size: 14px;
 }
 
 .location {
@@ -81,6 +91,7 @@ border-radius: 5px; */
 .location-name {
   color: #c5c5d9;
   font-weight: 400;
+  font-size: 12px;
   height: 14px;
   gap: 10px;
   margin-left: 5px;
@@ -88,7 +99,7 @@ border-radius: 5px; */
 
 .location-icon {
   position: relative;
-  top: 1px;
+  top: -1px;
   width: 15px;
   height: 15px;
 }
@@ -101,6 +112,7 @@ border-radius: 5px; */
 .car-name {
   color: #c5c5d9;
   font-weight: 400;
+  font-size: 12px;
   height: 14px;
   gap: 10px;
   margin-left: 5px;
@@ -108,7 +120,7 @@ border-radius: 5px; */
 
 .car-icon {
   position: relative;
-  top: 2px;
+  top: -1px;
   width: 15px;
   height: 15px;
 }
@@ -116,13 +128,15 @@ border-radius: 5px; */
 .car-plate {
   color: #c5c5d9;
   font-weight: 400;
+  font-size: 12px;
   height: 14px;
   gap: 10px;
+  margin-left: 5px;
 }
 
 .car-icon-plate {
   position: relative;
-  top: 2px;
+  top: -1px;
   width: 15px;
   height: 15px;
   margin-left: 5px;
@@ -136,14 +150,20 @@ border-radius: 5px; */
 }
 
 .button-join {
-  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
   background-color: #292933;
   border-radius: 5px;
   padding: 3px 13px;
 }
 
 .button-location {
-  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
   background-color: #292933;
   border-radius: 5px;
   padding: 3px 13px;
@@ -169,7 +189,10 @@ border-radius: 5px; */
 }
 
 .players-number {
-  font-size: 12px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,8 +200,11 @@ border-radius: 5px; */
 
 .players-icon {
   position: relative;
-  top: 2px;
-  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 1px;
+  width: 12px;
   height: 15px;
 }
 
@@ -188,7 +214,7 @@ border-radius: 5px; */
   margin: 10px;
   margin-left: auto;
   width: 329px;
-  height: 120px;
+  height: 115px;
   background-color: rgb(31, 31, 38);
   opacity: 0.8;
   color: white;
