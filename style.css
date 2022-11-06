@@ -158,6 +158,15 @@ border-radius: 5px; */
   background-color: #292933;
   border-radius: 5px;
   padding: 3px 13px;
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-join:hover {
+  background-color: #cead5c;
+  color: black;
+  cursor: pointer;
 }
 
 .button-location {
@@ -168,6 +177,34 @@ border-radius: 5px; */
   background-color: #292933;
   border-radius: 5px;
   padding: 3px 13px;
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-location:hover {
+  background-color: #36aaf9;
+  color: black;
+  cursor: pointer;
+}
+
+.button-remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  background-color: #292933;
+  border-radius: 5px;
+  padding: 3px 13px;
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-remove:hover {
+  background-color: rgb(187, 68, 68);
+  color: black;
+  cursor: pointer;
 }
 
 .buttons-container {
@@ -206,7 +243,6 @@ border-radius: 5px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 1px;
   width: 12px;
   height: 15px;
 }
@@ -229,12 +265,6 @@ border-radius: 5px; */
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   animation: pointer 1s ease-in-out infinite;
-}
-
-.notify:hover {
-  cursor: pointer;
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
 }
 
 @keyframes pointer {

@@ -46,8 +46,9 @@ class Toast {
   #interval = null;
   #logo;
   #typeName;
+  #players;
 
-  constructor(handler, content, time, type, typeName, location, logo) {
+  constructor(handler, content, time, type, typeName, location, players) {
     this.#handler = handler;
     this.#content = content;
     this.#time = time;
@@ -55,7 +56,7 @@ class Toast {
     this.#type = type;
     this.#typeName = typeName;
     this.#location = location;
-    this.#logo = logo;
+    this.#players = "players";
   }
 
   render(dom) {
@@ -80,11 +81,12 @@ class Toast {
     </div>
 
     <div class="buttons">
-      <div class="button-join">Dołącz</div>
-      <div class="button-location">Lokalizacja</div>
+      <button class="button-join">Dołącz</button>
+      <button class="button-location">Lokalizacja</button>
+      <button class="button-remove">Usuń</button>
       <div class="players">
       <ion-icon class="players-icon" name="people"></ion-icon>
-        <div class="players-number">6</div>
+        <div class="players-number">${this.players}</div>
       </div>
     </div>
 
@@ -92,23 +94,54 @@ class Toast {
 
     </div>`);
 
-    $(this.#elem).click((e) => {
-      $(this.#elem).css("filter", "brightness(130%)");
-      $(this.#elem).find("hr").css("border", "1px solid #36aaf9");
-      $(this.#elem).css("border", "1px solid white");
-      $(this.#elem).find(".content").css("padding", "1px");
-      $(this.#elem).find(".logo").css("display", "none");
-      $(this.#elem).css("opacity", "0.95").css("animation", "none");
-      clearInterval(this.#interval);
-      $(this.#elem).find(".time").css("width", "0%");
-      $(this.#elem).off("click");
-      // $(this.#elem).css("left", "-40%");
-      $(this.#elem).click((e) => {
+    // $(this.#elem).click((e) => {
+    //   $(this.#elem).css("filter", "brightness(130%)");
+    //   $(this.#elem).find("hr").css("border", "1px solid #36aaf9");
+    //   $(this.#elem).css("border", "1px solid white");
+    //   $(this.#elem).find(".content").css("padding", "1px");
+    //   $(this.#elem).find(".logo").css("display", "none");
+    //   $(this.#elem).css("opacity", "0.95").css("animation", "none");
+    //   clearInterval(this.#interval);
+    //   $(this.#elem).find(".time").css("width", "0%");
+    //   $(this.#elem).off("click");
+    //   // $(this.#elem).css("left", "-40%");
+    //   $(this.#elem).click((e) => {
+    //     $(this.#elem).remove();
+    //     this.#handler.dequeue(this);
+    //   });
+    // });
+
+    $(this.#elem).find(".players-number").text("0");
+    let players = 0;
+
+    $(this.#elem)
+      .find(".button-join")
+      .click((e) => {
+        players++;
+        $(this.#elem).find(".players-number").text(players);
+        $(this.#elem).css("filter", "brightness(130%)");
+        $(this.#elem).find("hr").css("border", "1px solid #36aaf9");
+        $(this.#elem).css("border", "1px solid white");
+        $(this.#elem).find(".content").css("padding", "1px");
+        $(this.#elem).find(".logo").css("display", "none");
+        $(this.#elem).css("opacity", "0.95").css("animation", "none");
+        clearInterval(this.#interval);
+        $(this.#elem).find(".time").css("width", "0%");
+        $(this.#elem).off("click");
+        // $(this.#elem).css("left", "-40%");
+        $(this.#elem).click((e) => {
+          $(this.#elem).find(".button-join").remove();
+          players--;
+          this.#handler.dequeue(this);
+        });
+      });
+
+    $(this.#elem)
+      .find(".button-remove")
+      .click((e) => {
         $(this.#elem).remove();
         this.#handler.dequeue(this);
       });
-    });
-
     $(dom).append(this.#elem);
 
     $(this.#elem).fadeIn(500, () => {
