@@ -2,6 +2,35 @@ function padTo2Digits(num) {
   return String(num).padStart(2, "0");
 }
 
+// this.#elem = $.parseHTML(`<div class="notify">
+// <div class="hour">${hoursAndMinutes}</div>
+
+// <div class="title">
+//   <div class="type">${this.#type}</div>
+//   <div class="typeName">${this.#typeName}</div>
+// </div>
+
+// <div class="location">
+//   <span id="location-icon" class="material-symbols-rounded">travel_explore</span>
+//   <div class="location-name">${this.#location}</div>
+// </div>
+
+// <div class="car">
+//   <span id="car-icon" class="material-symbols-rounded">directions_car</span><div class="car-name">Kuruma</div>
+
+//   <span id="car-icon-plate" class="material-symbols-rounded">high_quality</span><div class="car-plate">ABC-123</div>
+// </div>
+
+// <div class="buttons">
+//   <div class="button-join">Dołącz</div>
+//   <div class="button-location">Lokalizacja</div>
+//   <div class="players">
+//   <ion-icon class="players-icon" name="people"></ion-icon>
+//     <div class="players-number">6</div>
+
+//   </div>
+// </div>
+
 const date = new Date();
 const hoursAndMinutes =
   padTo2Digits(date.getHours()) + ":" + padTo2Digits(date.getMinutes());
@@ -38,38 +67,35 @@ class Toast {
       <div class="typeName">${this.#typeName}</div>
     </div>
     
-    <div class="location">
-      <img class="location-icon" src="./img/location.svg "></img>
-      
-      <span class="material-symbols-rounded">
-travel_explore
-</span>
-
+    <div class="location"> 
+    <ion-icon class="location-icon" name="navigate"></ion-icon>
       <div class="location-name">${this.#location}</div>
     </div>
 
     <div class="car">
-      <ion-icon class="car-icon" name="car-outline"></ion-icon><div class="car-name">Kuruma</div>
-      <ion-icon class="car-icon-plate" name="information-outline"></ion-icon><div class="car-plate">ABC-123</div>
+    <ion-icon class="car-icon" name="car"></ion-icon><div class="car-name">Kuruma</div>
+
+
+    <ion-icon class="car-icon-plate" name="information-circle"></ion-icon><div class="car-plate">ABC-123</div>
     </div>
 
     <div class="buttons">
       <div class="button-join">Dołącz</div>
       <div class="button-location">Lokalizacja</div>
       <div class="players">
-      <ion-icon class="players-icon" name="people-outline"></ion-icon>
-      <div class="players-number">6</div>
+      <ion-icon class="players-icon" name="people"></ion-icon>
+        <div class="players-number">6</div>
       </div>
     </div>
 
-
+    <div class="time"></div>
 
     </div>`);
 
     $(this.#elem).click((e) => {
       $(this.#elem).css("filter", "brightness(130%)");
       $(this.#elem).find("hr").css("border", "1px solid #36aaf9");
-      $(this.#elem).css("border", "1px solid #36aaf9");
+      $(this.#elem).css("border", "1px solid white");
       $(this.#elem).find(".content").css("padding", "1px");
       $(this.#elem).find(".logo").css("display", "none");
       $(this.#elem).css("opacity", "0.95").css("animation", "none");
