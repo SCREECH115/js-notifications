@@ -81,9 +81,9 @@ class Toast {
     </div>
 
     <div class="buttons">
-      <button class="button-join">Dołącz</button>
-      <button class="button-location">Lokalizacja</button>
-      <button class="button-remove">Usuń</button>
+    <button class="button-join">Dołącz</button>
+    <button class="button-location">Lokalizacja</button>
+    <button class="button-remove">Usuń</button>
       <div class="players">
       <ion-icon class="players-icon" name="people"></ion-icon>
         <div class="players-number">${this.players}</div>
@@ -113,11 +113,14 @@ class Toast {
 
     $(this.#elem).find(".players-number").text("0");
     let players = 0;
+    $(this.#elem).find(".button-remove").css("display", "none");
 
     $(this.#elem)
       .find(".button-join")
       .click((e) => {
         players++;
+        // make button remove visible
+        $(this.#elem).find(".button-remove").css("display", "block");
         $(this.#elem).find(".players-number").text(players);
         $(this.#elem).css("filter", "brightness(130%)");
         $(this.#elem).find("hr").css("border", "1px solid #36aaf9");
