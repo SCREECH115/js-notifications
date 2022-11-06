@@ -172,7 +172,7 @@ class ToastManager {
   #toastsQueue = [];
   #maxSize;
 
-  constructor(dom = $("#main"), maxSize = 4) {
+  constructor(dom = $("#main"), maxSize = 3) {
     this.#dom = dom;
     this.#maxSize = maxSize;
   }
@@ -207,17 +207,17 @@ window.onload = () => {
   toast.addItem("", 5000, 101, "Active shooting", "Magellan Avenue");
   setTimeout(() => {
     toast.addItem("", 5000, 501, "Car theft", "Meteor Street");
-    // setTimeout(() => {
-    //   toast.addItem("", 5000, 900, "Bank robbery", "San Andreas Avenue");
-    //   setTimeout(() => {
-    //     toast.addItem("", 5000, 960, "Kidnapping", "Mirror Park Boulevard");
-    //     setTimeout(() => {
-    //       toast.addItem("", 5000, 801, "Shop robbery", "Los Santos Airport");
-    //       setTimeout(() => {
-    //         toast.addItem("", 5000, 609, "Prostitution", "Hawick Avenue");
-    //       }, 3000);
-    //     }, 3000);
-    //   }, 3000);
-    // }, 3000);
+    setTimeout(() => {
+      toast.addItem("", 5000, 900, "Bank robbery", "San Andreas Avenue");
+      setTimeout(() => {
+        toast.addItem("", 5000, 960, "Kidnapping", "Mirror Park Boulevard");
+        setTimeout(() => {
+          toast.addItem("", 5000, 801, "Shop robbery", "Los Santos Airport");
+          setTimeout(() => {
+            toast.addItem("", 5000, 609, "Prostitution", "Hawick Avenue");
+          }, 3000);
+        }, 3000);
+      }, 3000);
+    }, 3000);
   }, 2000);
 };
